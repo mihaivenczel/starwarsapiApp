@@ -39,7 +39,7 @@ const IntroScreen = ({route, navigation}: Props) => {
                 item: route.params.item,
               });
             }}>
-            <Text style={styles.text}>Skip</Text>
+            <Text style={styles.text}>{strings.introScreen.skip}</Text>
           </TouchableOpacity>
         </View>
       </ImageBackground>

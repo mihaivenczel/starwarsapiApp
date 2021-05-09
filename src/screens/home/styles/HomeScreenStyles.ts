@@ -3,11 +3,11 @@ import {metrics, colors} from '../../../core/constants';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
+    flex: metrics.size1,
     backgroundColor: colors.GRAY,
   },
   titleContainer: {
-    flex: 1,
+    flex: metrics.size1,
     marginTop: metrics.size40,
     alignSelf: 'center',
   },
@@ -22,9 +22,9 @@ export default StyleSheet.create({
     fontWeight: 'bold',
   },
   button: {
-    zIndex: 10,
-    marginTop: 100,
-    borderWidth: 1,
+    zIndex: metrics.size10,
+    marginTop: metrics.size100,
+    borderWidth: metrics.size1,
     borderColor: 'white',
     alignSelf: 'center',
   },

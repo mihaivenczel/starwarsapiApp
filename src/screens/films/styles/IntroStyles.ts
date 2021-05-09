@@ -10,14 +10,14 @@ export default StyleSheet.create({
     backgroundColor: 'transparent',
   },
   container: {
-    flex: 1,
+    flex: metrics.size1,
   },
   backgroundImage: {
-    flex: 1,
+    flex: metrics.size1,
     width: '100%',
   },
   contentContainer: {
-    flex: 1,
+    flex: metrics.size1,
     transform: [{rotateX: '50deg'}],
     marginBottom: metrics.size125,
   },

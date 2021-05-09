@@ -3,9 +3,6 @@ import {
   View,
   Text,
   TouchableOpacity,
-  Image,
-  FlatList,
-  ListRenderItem,
   ImageBackground,
 } from 'react-native';
 import {
@@ -15,15 +12,16 @@ import {
   getStarship,
   getVehicle,
 } from '../../api/api';
+import {strings} from '../../core/constants';
 import {background} from '../../core/constants/images';
 import {detailStyles as styles} from './styles';
 
-// interface Props {
-//   styles: ReturnType<typeof FilmsScreenStyles>;
-//   navigation: any;
-// }
+interface Props {
+  navigation: any;
+  route: any;
+}
 
-const FilmDetailScreen = ({route, navigation}) => {
+const FilmDetailScreen = ({route, navigation}: Props) => {
   const [characters, setCharacters] = useState<string[]>([]);
   const [dataCharacters, setDataCharacters] = useState([]);
   const [planets, setPlanets] = useState<string[]>([]);
@@ -129,7 +127,10 @@ const FilmDetailScreen = ({route, navigation}) => {
               onPress={() => {
                 navigation.navigate('CharacterScreen', {dataCharacters});
               }}>
-              <Text style={styles.cardTitleText}>Go to Characters</Text>
+              <Text style={styles.cardTitleText}>
+                {strings.filmDetailScreen.goTo}
+                {strings.filmDetailScreen.characters}
+              </Text>
             </TouchableOpacity>
           </View>
           <View>
@@ -138,7 +139,10 @@ const FilmDetailScreen = ({route, navigation}) => {
               onPress={() => {
                 navigation.navigate('PlanetScreen', {dataPlanets});
               }}>
-              <Text style={styles.cardTitleText}>Go to Planets</Text>
+              <Text style={styles.cardTitleText}>
+                {strings.filmDetailScreen.goTo}
+                {strings.filmDetailScreen.planets}
+              </Text>
             </TouchableOpacity>
           </View>
           <View>
@@ -147,7 +151,10 @@ const FilmDetailScreen = ({route, navigation}) => {
               onPress={() => {
                 navigation.navigate('StarshipScreen', {dataStarships});
               }}>
-              <Text style={styles.cardTitleText}>Go to Starships</Text>
+              <Text style={styles.cardTitleText}>
+                {strings.filmDetailScreen.goTo}{' '}
+                {strings.filmDetailScreen.starships}
+              </Text>
             </TouchableOpacity>
           </View>
           <View>
@@ -156,7 +163,10 @@ const FilmDetailScreen = ({route, navigation}) => {
               onPress={() => {
                 navigation.navigate('VehicleScreen', {dataVehicles});
               }}>
-              <Text style={styles.cardTitleText}>Go to Vehicles</Text>
+              <Text style={styles.cardTitleText}>
+                {strings.filmDetailScreen.goTo}
+                {strings.filmDetailScreen.vehicles}
+              </Text>
             </TouchableOpacity>
           </View>
           <View>
@@ -165,7 +175,10 @@ const FilmDetailScreen = ({route, navigation}) => {
               onPress={() => {
                 navigation.navigate('SpeciesScreen', {dataSpecies});
               }}>
-              <Text style={styles.cardTitleText}>Go to Species</Text>
+              <Text style={styles.cardTitleText}>
+                {strings.filmDetailScreen.goTo}
+                {strings.filmDetailScreen.species}
+              </Text>
             </TouchableOpacity>
           </View>
           <View>
@@ -174,7 +187,10 @@ const FilmDetailScreen = ({route, navigation}) => {
               onPress={() => {
                 navigation.navigate('MetaDataScreen', {item});
               }}>
-              <Text style={styles.cardTitleText}>Go to MetaData</Text>
+              <Text style={styles.cardTitleText}>
+                {strings.filmDetailScreen.goTo}
+                {strings.filmDetailScreen.metaData}
+              </Text>
             </TouchableOpacity>
           </View>
         </View>

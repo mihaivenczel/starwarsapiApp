@@ -8,7 +8,7 @@ export default StyleSheet.create({
     borderColor: colors.GRAY,
     backgroundColor: colors.GRAY,
     // marginTop: metrics.size20,
-    marginBottom:50,
+    marginBottom:metrics.size50,
     marginHorizontal: metrics.size50,
     padding: metrics.size10,
   },

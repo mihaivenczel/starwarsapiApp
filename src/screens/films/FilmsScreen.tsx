@@ -1,25 +1,16 @@
 import React, {useState, useEffect} from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Image,
-  FlatList,
-  ListRenderItem,
-  ImageBackground,
-} from 'react-native';
+import {View, TouchableOpacity, FlatList, ImageBackground} from 'react-native';
 import {getAllFilms} from '../../api/api';
 import {background} from '../../core/constants/images';
 import {FilmCard} from './components';
 import {filmsStyles as styles} from './styles';
 import {FilmDataType} from './types';
 
-// interface Props {
-//   styles: ReturnType<typeof FilmsScreenStyles>;
-//   navigation: any;
-// }
+interface Props {
+  navigation: any;
+}
 
-const FilmsScreen = ({navigation}) => {
+const FilmsScreen = ({navigation}: Props) => {
   const [data, setData] = useState<FilmDataType[]>([]);
   // const [copyData, setCopyData] = useState<FilmDataType[]>(data);
   // const [selected, setSelected] = useState(null);

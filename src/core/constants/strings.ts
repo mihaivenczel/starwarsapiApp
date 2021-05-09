@@ -10,10 +10,21 @@ const strings = {
   LOGIN: 'LOGIN',
 
   homeScreen: {
-    goTo: 'Go to',
+    goTo: 'Go to Films',
+    appName: 'Star Wars Api App',
   },
   introScreen: {
     episode: 'Episode ',
+    skip: 'Skip',
+  },
+  filmDetailScreen: {
+    goTo: 'Go to ',
+    characters: 'Characters',
+    vehicles: 'Vehicles',
+    starships: 'Starships',
+    metaData: 'MetaData',
+    species: 'Species',
+    planets: 'Planets',
   },
 };
 
